@@ -1,0 +1,177 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "VET_API | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:7053"
+    },
+    {
+      "url": "http://localhost:5085"
+    }
+  ],
+  "paths": {
+    "/api/Clientes/Registrar": {
+      "post": {
+        "tags": [
+          "Clientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClienteRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClienteRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClienteRequestModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Clientes/Consultar": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Mascotas/Registrar": {
+      "post": {
+        "tags": [
+          "Mascotas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MascotaRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MascotaRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MascotaRequestModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Mascotas/Consultar": {
+      "get": {
+        "tags": [
+          "Mascotas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClienteRequestModel": {
+        "required": [
+          "cedula",
+          "nombre",
+          "correoElectronico"
+        ],
+        "type": "object",
+        "properties": {
+          "cedula": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "correoElectronico": {
+            "type": "string"
+          }
+        }
+      },
+      "MascotaRequestModel": {
+        "required": [
+          "nombre",
+          "especie",
+          "raza",
+          "peso",
+          "idCliente"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "especie": {
+            "type": "string"
+          },
+          "raza": {
+            "type": "string"
+          },
+          "peso": {
+            "maximum": 9999,
+            "minimum": 0.01,
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "idCliente": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Clientes"
+    },
+    {
+      "name": "Mascotas"
+    }
+  ]
+}

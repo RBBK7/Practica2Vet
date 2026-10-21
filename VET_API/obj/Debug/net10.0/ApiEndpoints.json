@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "VET_API.Controllers.ClientesController",
+    "Method": "Consultar",
+    "RelativePath": "api/Clientes/Consultar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VET_API.Controllers.ClientesController",
+    "Method": "Registrar",
+    "RelativePath": "api/Clientes/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "VET_API.Models.ClienteRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VET_API.Controllers.MascotasController",
+    "Method": "Consultar",
+    "RelativePath": "api/Mascotas/Consultar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VET_API.Controllers.MascotasController",
+    "Method": "Registrar",
+    "RelativePath": "api/Mascotas/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "VET_API.Models.MascotaRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
