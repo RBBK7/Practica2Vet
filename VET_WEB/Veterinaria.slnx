@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../VET_API/VET_API.csproj" />
+  <Project Path="VET_WEB.csproj" />
+</Solution>

@@ -1,0 +1,39 @@
+﻿@model List<MascotaConsultaResponse>
+@{
+    ViewData["Title"] = "Consulta de Mascotas";
+}
+
+<h2>Consulta de Mascotas</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<table class="table table-striped table-bordered">
+    <thead class="table-success">
+        <tr>
+            <th>Cédula del cliente</th>
+            <th>Nombre del cliente</th>
+            <th>Nombre de la mascota</th>
+            <th>Especie</th>
+            <th>Peso (kg)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Cedula</td>
+                <td>@m.NombreCliente</td>
+                <td>@m.NombreMascota</td>
+                <td>@m.Especie</td>
+                <td>@m.Peso</td>
+            </tr>
+        }
+        @if (!Model.Any())
+        {
+            <tr><td colspan="5" class="text-center">No hay mascotas registradas</td></tr>
+        }
+    </tbody>
+</table>

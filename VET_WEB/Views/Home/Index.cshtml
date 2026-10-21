@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<style>
+    .opcion-card {
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .opcion-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        color: inherit;
+    }
+
+    .opcion-icono {
+        font-size: 3rem;
+    }
+</style>
+
+<div class="text-center py-4">
+    <h1 class="display-5">¡Bienvenido a la Veterinaria!</h1>
+    <p class="lead">Para iniciar, seleccione una opción.</p>
+</div>
+
+<div class="row g-4 justify-content-center">
+    <div class="col-md-4">
+        <a class="opcion-card" asp-controller="Clientes" asp-action="Registro">
+            <div class="card h-100 text-center border-success">
+                <div class="card-body py-5">
+                    <div class="opcion-icono">👤</div>
+                    <h4 class="card-title mt-3">Registro de Clientes</h4>
+                    <p class="card-text text-muted">Registre nuevos clientes en el sistema.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a class="opcion-card" asp-controller="Mascotas" asp-action="Registro">
+            <div class="card h-100 text-center border-success">
+                <div class="card-body py-5">
+                    <div class="opcion-icono">🐶</div>
+                    <h4 class="card-title mt-3">Registro de Mascotas</h4>
+                    <p class="card-text text-muted">Registre las mascotas de sus clientes.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a class="opcion-card" asp-controller="Mascotas" asp-action="Consulta">
+            <div class="card h-100 text-center border-success">
+                <div class="card-body py-5">
+                    <div class="opcion-icono">📋</div>
+                    <h4 class="card-title mt-3">Consulta de Mascotas</h4>
+                    <p class="card-text text-muted">Consulte todas las mascotas registradas.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

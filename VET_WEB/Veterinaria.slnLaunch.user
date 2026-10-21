@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Ambos",
+    "Projects": [
+      {
+        "Path": "VET_WEB.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\VET_API\\VET_API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
